@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	
+	let arrimage = ['메뚜기_1.png','메뚜기_2.png','메뚜기_3.png','메뚜기_4.png','메뚜기_5.png','메뚜기_6.png'];
+	let cnt = 1;
+	 
+	let img1, img2, img3, img4, img5, img6;
+	let targetNum;
+	function imgMove(){	
+		
+		img1 = setInterval('imgMove2(1)',200);
+  		img2 = setInterval('imgMove2(2)',200);
+  		img3 = setInterval('imgMove2(3)',200);
+		img4 = setInterval('imgMove2(4)',200);
+		img5 = setInterval('imgMove2(5)',200);
+	/* 	img6 = setInterval('imgMove2(6)',200); */
+	
+	}
+
+	function imgMove2(n){	
+		
+		targetNum = "target"+n;
+		let area = document.getElementById(targetNum);
+		if(cnt==6)
+			cnt = 0;
+			var result = "<img src='../img/"+arrimage[cnt++]+"' style='width: 150px; height: 150px'>";
+			area.innerHTML = result;
+	};
+	
+  	
+	window.setTimeout(function(){
+		
+		window.clearInterval(img1);
+		window.clearInterval(img2);
+		window.clearInterval(img3);
+		window.clearInterval(img4);
+		window.clearInterval(img5);
+		window.clearInterval(img6);
+		
+	},10000) 
+	
+	 
+</script>
+</head>
+<body onload="imgMove()">
+
+	<h3>메뚜기 뜀뛰기</h3>
+	<hr>
+	<span id="target1"></span>
+	<span id="target2"></span>
+	<span id="target3"></span>
+	<span id="target4"></span>
+	<span id="target5"></span>
+	<span id="target6"></span>
+</body>
+</html>
