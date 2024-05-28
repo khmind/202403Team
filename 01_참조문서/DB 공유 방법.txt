@@ -1,0 +1,5 @@
+https://we-always-fight-with-code.tistory.com/6 
+
+
+MySQL Host Address : 192.168.0.25
+데이터베이스 : recipe
